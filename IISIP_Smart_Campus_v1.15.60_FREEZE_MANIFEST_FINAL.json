@@ -1,0 +1,74 @@
+{
+  "project": "IISIP Smart Campus",
+  "version": "v1.15.60",
+  "package_status": "FRONTEND_FUNCTIONAL_FREEZE_FINAL",
+  "freeze_date": "2026-10-11",
+  "frontend_acceptance": {
+    "smoke_test": "PASS",
+    "github_pages_real_browser_spot_check": "PASS",
+    "logo_asset_fix": "PASS",
+    "loading_screen_cleanup": "PASS",
+    "accepted_by_project_owner": true
+  },
+  "canonical_artifacts": {
+    "canonical_frontend": {
+      "filename": "IISIP_Smart_Campus_v1.15.60_FRONTEND_FUNCTIONAL_FREEZE_LOADING_CLEAN.html",
+      "size_bytes": 3047568,
+      "sha256": "2252bdc351b152064bae3d1f37248fb9dcfda0049432370d5f90e2457253c433",
+      "present": true
+    },
+    "canonical_blueprint": {
+      "filename": "IISIP_Smart_Campus_Blueprint_v1.15.60_FULL_FINAL_LOCKED_BACKEND_HANDOFF.docx",
+      "size_bytes": 839424,
+      "sha256": "055766a7a5bf2c6845f03584bcbde96f54006a7a9eb29170fdb59e314b472507",
+      "present": true
+    },
+    "user_manual": {
+      "filename": "IISIP_Smart_Campus_Manual_Penggunaan_dan_Alur_Per_Role_v1.15.60.docx",
+      "size_bytes": 69169,
+      "sha256": "feec2f22113b5d11048bd80a0ef2bd2f26bd9654b89514f246fdaa51857dad6f",
+      "present": true
+    },
+    "smoke_report_json": {
+      "filename": "IISIP_Smart_Campus_v1.15.60_SMOKE_TEST_REPORT.json",
+      "size_bytes": 3097,
+      "sha256": "b8f8b5f93f9fc14310770bae60d522e26c6ed6beebf7bf37cd7d728e6d0224ad",
+      "present": true
+    },
+    "smoke_report_txt": {
+      "filename": "IISIP_Smart_Campus_v1.15.60_SMOKE_TEST_REPORT.txt",
+      "size_bytes": 1536,
+      "sha256": "bd6e46dad0703613bd0875d43a967ee436f3455d1efaa1b280f3bb5ac9c05d1d",
+      "present": true
+    }
+  },
+  "canonical_frontend": "IISIP_Smart_Campus_v1.15.60_FRONTEND_FUNCTIONAL_FREEZE_LOADING_CLEAN.html",
+  "canonical_blueprint": "IISIP_Smart_Campus_Blueprint_v1.15.60_FULL_FINAL_LOCKED_BACKEND_HANDOFF.docx",
+  "canonical_manual": "IISIP_Smart_Campus_Manual_Penggunaan_dan_Alur_Per_Role_v1.15.60.docx",
+  "qa_evidence": [
+    "IISIP_Smart_Campus_v1.15.60_SMOKE_TEST_REPORT.json",
+    "IISIP_Smart_Campus_v1.15.60_SMOKE_TEST_REPORT.txt"
+  ],
+  "backend_handoff": {
+    "ready_to_start": true,
+    "next_phase": "Supabase Foundation + Canonical Database Schema",
+    "production_ready": false,
+    "production_blockers": [
+      "Backend authentication and session",
+      "Canonical PostgreSQL/Supabase database",
+      "Role/scope authorization and RLS",
+      "Persistent audit log",
+      "Realtime notifications",
+      "Storage authorization",
+      "Payment integration",
+      "Backend integration UAT"
+    ]
+  },
+  "freeze_rules": [
+    "Canonical frontend is the FRONTEND_FUNCTIONAL_FREEZE_LOADING_CLEAN artifact listed in this manifest.",
+    "Do not add or change frontend business features after freeze except approved blueprint revisions or backend integration bug fixes.",
+    "Smoke artifacts are QA evidence only and are not the canonical application artifact.",
+    "Frontend local/reference state is not a production source of truth.",
+    "Production readiness requires backend implementation, security/RLS review, integration UAT PASS, and release-readiness review."
+  ]
+}
